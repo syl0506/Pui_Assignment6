@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 $(document).scrollTop(0);
 //Check if it is scrolling or not
-window.IsAchorMode = false;
+window.IsAnchorMode = false;
 
 
 //For smooth scrolling
@@ -19,6 +19,9 @@ $('.navItem').click(function (e) {
 			for(var n =0; n < navBar.length; n++)
 			{
 
+
+//Compared the innerHTML of navbar and result from the page, activate
+
 				if(curLink[0].innerHTML == navBar[n].innerHTML)
 				{
 
@@ -31,7 +34,7 @@ $('.navItem').click(function (e) {
 
 			}
 
-			window.IsAchorMode = true;
+			window.IsAnchorMode = true;
             var scrollPoint = $(curLink.attr('href')).position().top;
             $('body,html').animate(
 			{
@@ -42,7 +45,7 @@ $('.navItem').click(function (e) {
 				complete: function() {
 
 					setTimeout( function(){
-						window.IsAchorMode = false;
+						window.IsAnchorMode = false;
 						// Do something after 0.8 second
 					  }  , 80 );
 
@@ -63,7 +66,7 @@ $(window).scroll(function () {
 function onScrollHandle() {
 
       //If it is moving do not take in input
-		if(window.IsAchorMode == true) return;
+		if(window.IsAnchorMode == true) return;
 
 		var currentScrollPos = $(document).scrollTop();
 		var divIds = ["landing_Animation", "portfolio", "about"];
@@ -138,6 +141,7 @@ InfoModule.getWeatherByCity("Pittsburgh,us", function(weather){
   var weather = weather.split(" ");
   var currentW;
   var weatherTxt = $('#weather_Txt');
+  //Get key words from the information retrieved from API
   if (weather.length == 1){
     currentW = weather[0];
   }else{
@@ -174,12 +178,9 @@ $('.weather_Toggle').click(function(){
 
 $('.item').click(function(){
 
-
     var items = $('.content');
     var currentItem = $(this).attr('id');
-
-
-
+    //If there is a portfolio page with the id go to that page
     if (currentItem != undefined){
       $(document).scrollTop(0);
 

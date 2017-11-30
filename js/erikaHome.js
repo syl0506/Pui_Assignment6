@@ -88,8 +88,6 @@
 
 		BHelper.update(delta);
 
-		debugCube.position.set(BHelper.Input.Mouse.pos.x, BHelper.Input.Mouse.pos.y, 1)
-
 		BStageManager.update(delta);
 
 		for(var index in scene.gameObjects)
@@ -106,10 +104,7 @@
 	createScene();
 	createLight();
 
-	var geometry = new THREE.BoxBufferGeometry( 0.1, 0.1, 0.1 );
-	var material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-	debugCube = new THREE.Mesh( geometry, material );
-	//scene.add( debugCube );
+
 
 	update();
 
