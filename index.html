@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erika's Portfolio</title>
+
+    <meta charset = "utf-8" />
+    <meta name = "author" about = "Erika Lee" />
+    <meta name = "description" about = "Personal Website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+
+     <!--jQuery must also be linked for Bootstrap to function-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+    <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+
+    <style>
+            body { margin: 0; }
+    </style>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--use Isotope for filtering-->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+    <title>Erika's Portfolio</title>
+
+</head>
+<body>
+
+<div id = "main-site">
+<!-- left side nav area -->
+
+
+    <div class = "nav col-sm-3 col-lg-2">
+        <ul class="navBar">
+            <a href="index.html"><img src="img/logo.svg" width="120px">
+            <hr>
+            <li><a class="navItem" href="#home">HOME</a></li>
+            <li><a class="navItem" href="#portfolio">PORTFOLIO</a></li>
+            <li><a class="navItem" href="#about">ABOUT</a></li>
+            <li><a href="https://drive.google.com/file/d/1eoVRAOYQgCqtA9PsNmtV-NfgR47ow6Op/view?usp=sharing" target="_blank">RESUME</a></li>
+          </ul>
+
+    </div>
+
+<!-- right side content area -->
+    <div class = "content col-sm-9 col-lg-10 active " id = "home" >
+
+
+    <div id ="landing_Animation" width='500px' height='500px' >
+        <div id = "canvas">
+        </div>
+        <div id = "weather_Btn">
+            <button class = "weather_Toggle" id = "rain"></button>
+            <button class = "weather_Toggle" id = "sky"></button>
+            <button class = "weather_Toggle" id = "clouds"></button>
+            <button class = "weather_Toggle" id = "snow"></button>
+        </div>
+        <div id = "weather_Txt">
+            <h2>Hello!<i class="em em-wave"></i> I'm Erika. </h2><br> I'm a UX designer with a strong passion for <br>building games and prototypes with code.<br><br>
+            Right now, it's <span id = "weather"></span > in Pittsburgh.<br><br>
+            Change the weather by clicking the buttons.<br>
+            Try clicking and dragging the <span id = "object"></span >!
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="titles">
+        PORTFOLIO
+        </div>
+        <div id ="filter" class ="btn-group">
+            <button type="button" class="btn btn-default filter-button" data-filter="*">All</button>
+            <button type="button" class="btn btn-default filter-button" data-filter=".web">Web</button>
+            <button type="button" class="btn btn-default filter-button" data-filter=".mobile">Mobile</button>
+            <button type="button" class="btn btn-default filter-button" data-filter=".vr">VR</button>
+        </div>
+
+        <div id = "container">
+            <div class ="row grid">
+
+                <div class="item col-sm-4 filterDiv web mobile" id="McKinsey">
+                    <img class="portfolio_Img" src="img/mckinsey_thumbnail.png"/>
+                    <div class="overlay">
+                        <div class="itemTitle">McKinsey Internship</div>
+                        <div class="itemTag">Web Mobile</div>
+                    </div>
+                </div>
+
+                <div class="item col-sm-4 filterDiv web" id="CsAcademy">
+                    <img class="portfolio_Img" src="img/csacademy.png"/>
+                    <div class="overlay">
+                        <div class="itemTitle">CMU CS Academy</div>
+                        <div class="itemTag">Web</div>
+                    </div>
+                </div>
+
+                <div class="item col-sm-4 filterDiv mobile web">
+                    <img class="portfolio_Img" src="img/knock_thumbnail.png"/>
+                    <div class="overlay">
+                        <div class="itemTitle">Knock</div>
+                        <div class="itemTag">Web Mobile</div>
+                    </div>
+                </div>
+
+                    <div class="item col-sm-4 filterDiv mobile">
+                    <img class="portfolio_Img" src="img/chop_thumbnail.png"/>
+                    <div class="overlay">
+                        <div class="itemTitle">ChopChop</div>
+                        <div class="itemTag">Mobile</div>
+                    </div>
+                </div>
+
+                <div class="item col-sm-4 filterDiv vr">
+                    <img class="portfolio_Img" src="img/intouch_thumbnail.png"/>
+                    <div class="overlay">
+                        <div class="itemTitle">InTouch</div>
+                        <div class="itemTag">VR</div>
+                    </div>
+                </div>
+
+                <div class="item col-sm-4 filterDiv mobile">
+                    <img class="portfolio_Img" src="img/clawould_thumbnail.png"/>
+                    <div class="overlay">
+                        <div class="itemTitle">ClaWould</div>
+                        <div class="itemTag">Mobile</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id ="about">
+    <div class="titles">
+        ABOUT
+    </div>
+    <div id ="aboutTable">
+
+        <div id = "aboutTable_pic">
+            <img id ="profile_Pic" src = "img/profile.jpg">
+        </div>
+        <div id ="aboutTable_sum">
+            <h2>Hello! I'm Erika.</h2><br><h3>I'm a User Experience Designer based in Pittsburgh. I'm pursuing my masters in Entertainment Technology at Carnegie Mellon University. </h3><br><br>
+            Before pursuing my masters in CMU, I graduated with a Bachelors in Business Administration and Masters in Communication Design from Yonsei University, Seoul, South Korea.<br>
+            <div id ="socialMedia">
+            <a href="https://www.linkedin.com/in/syl0506" target="_blank"><img src="img/linkedin-round.png"></a>
+            <a href="https://github.com/syl0506/" target="_blank"><img src="img/circle.ico"></a>
+
+            </div>
+        </div>
+
+    </div >
+    </div >
+    </div>
+
+    <!--Portfolio Item 1_McKinsey-->
+
+    <div class = "content col-sm-9 col-lg-10 " id ="McKinsey_detail" >
+
+        <div class ="portfolio_cover">
+            <div class ="portfolio_Img">
+                <img src ="img/mckinsey.png">
+            </div>
+        </div>
+        <div class ="portfolio_detail">
+        <div class ="detail_L">
+
+        <h3>Brief</h3>
+
+        <p>I worked as an Experience Design Intern at McKinsey Digital over the summer. I worked on creating digital solutions for a major insurance company and collaborated with a cross-functional team in an agile environment. During the internship, I participated in solving complex design problems by organizing client/customer workshops, crafting user journeys and personas and creating high fidelity prototypes.<br><br>
+
+        I can’t disclose any work or details, but I would love to talk about my experience.
+        </p>
+        </div>
+
+        <div class="detail_R">
+        <table>
+            <tbody>
+                <tr><td>Role<td></tr>
+                <tr class="table_c"><td>Experience Design Intern<br><td></tr>
+                <tr><td>Duration<td></tr>
+                <tr class="table_c"><td>10 weeks<td></tr>
+                <tr><td>Description<td></tr>
+                <tr class="table_c"><td>Worked as an Experience Design Intern at McKinsey Digital, New York<td></tr>
+            </tbody>
+        </table>
+
+        </div>
+
+
+
+        </div>
+        <br style="clear:both;"/>
+
+    </div>
+
+    <!--Portfolio Item 1_CSAcademy-->
+
+    <div class = "content col-sm-9 col-lg-10 " id ="CsAcademy_detail" >
+
+        <div class ="portfolio_cover">
+            <div class ="portfolio_Img">
+                <img src ="img/csacademy.png">
+            </div>
+        </div>
+        <div class ="portfolio_detail">
+        <div class ="detail_L">
+
+        <h3>Brief</h3>
+
+        <p>CMU Computer Science Academy is a project-based class led by Professor David Kosbie. We are working to create a new CS curriculum content and platform for 9th graders.  We have partnered with 14 local school districts and will be piloting our first product in January.<br><br>
+
+        Although this is a course, we are working like a start-up. We are constantly going through rapid cycles of prototyping, testing, iteration. I am currently leading the UX design for the IDE/ and the web student portal and creating all of the UI.<br><br>
+
+        This project is still in progress.<br><br>
+
+        <a href="https://framer.cloud/GXcIs/" target="_blank">Click here to see initial prototype created with Framer.</a>
+        </p><br>
+
+        <h3>Challenges</h3>
+
+        <p>Currently, the most challenging part of this project is<br><br>
+
+        1. Creating a tool that is easy and intuitive for a wide range of target user: high school students and teacher.<br>
+
+        2. Designing for a wide range of screen resolutions(800×600 to 1920×1080) to ensure high quality of user experience.<br>
+
+        3. Communicating with developers about the overall experience making sure the actual product matches what was designed.<br><br>
+
+        </p>
+        <br>
+
+        <h3>Current Stage</h3>
+
+        <p>We have deployed our first prototype to teachers. Based on testing, we are working to refine upon it. At the same time, we are considering the teachers’ experience of teaching this curriculum and working to build the teacher portal as well.
+
+        I am working as the Lead UX designer/Teaching Assistant for next semester.<br><br>
+
+        </p>
+        <br>
+
+        <h3>Work in Progress</h3>
+        <div class="image_gallery">
+            <img src="img/csacademy_1.png">
+        </div>
+        <br>
+
+
+        </div>
+
+        <div class="detail_R">
+        <table>
+            <tbody>
+                <tr><td>Role<td></tr>
+                <tr class="table_c"><td>UX/UI design, interaction design, user testingn<br><td></tr>
+                <tr><td>Duration<td></tr>
+                <tr class="table_c"><td>Currently in development<td></tr>
+                <tr><td>Description<td></tr>
+                <tr class="table_c"><td>Carnegie Mellon University, Fall 2017<td></tr>
+            </tbody>
+        </table>
+
+        </div>
+
+
+
+        </div>
+    </div>
+</div>
+<br style="clear:both;"/>
+</div>
+
+
+
+ <!--footer-->
+
+<div class='footer'><hr>
+        <div id = "rights">
+            <p>Copyright 2017 Erika Sukyoung Lee | All Rights Reserved</p>
+        </div>
+        <br style="clear:both;"/>
+</div>
+
+
+
+ <!--Animation Scene Scripts-->
+
+<script src="js/three.min.js"></script>
+
+<script src="js/InfoModule.js"></script>
+
+<script src="js/BHelper.js"></script>
+<script src="js/BStageManager.js"></script>
+
+<script src="js/threejs/TrackballControls.js"></script>
+
+<script src="js/erikaHome.js"></script>
+
+
+</body>
+</html>
